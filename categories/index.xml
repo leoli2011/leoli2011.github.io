@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-<<<<<<< HEAD
     <title>Categories on 老李小站</title>
     <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on 老李小站</description>
@@ -9,16 +8,6 @@
     <language>en</language>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-=======
-    <title>Categories on My New Hugo Site</title>
-    <link>https://leoli2011.github.io/categories/</link>
-    <description>Recent content in Categories on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://leoli2011.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
->>>>>>> 29f1c0d1728f5a0557124e5e57d4de70b5463503
-    
     
   </channel>
 </rss>
