@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>VS Code配置为强大的Markdown编辑器 - 老李小站</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lilei520007@126.com" /><meta name="description" content="介绍 VS Code是一个开源跨平台的强大文本编辑器，利用丰富的扩展插件可以打造出一个功能强大的Markdown编辑器。 VS Code 下载地址: https://code.visualstudio.com 必备插件安" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="VS Code配置为强大的Markdown编辑器" />
+<meta property="og:description" content="介绍 VS Code是一个开源跨平台的强大文本编辑器，利用丰富的扩展插件可以打造出一个功能强大的Markdown编辑器。 VS Code 下载地址: https://code.visualstudio.com 必备插件安" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/" />
+<meta property="article:published_time" content="2020-05-31T10:11:06+08:00" />
+<meta property="article:modified_time" content="2020-05-31T10:11:06+08:00" />
+<meta itemprop="name" content="VS Code配置为强大的Markdown编辑器">
+<meta itemprop="description" content="介绍 VS Code是一个开源跨平台的强大文本编辑器，利用丰富的扩展插件可以打造出一个功能强大的Markdown编辑器。 VS Code 下载地址: https://code.visualstudio.com 必备插件安">
+<meta itemprop="datePublished" content="2020-05-31T10:11:06&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-31T10:11:06&#43;08:00" />
+<meta itemprop="wordCount" content="565">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="VS Code配置为强大的Markdown编辑器"/>
+<meta name="twitter:description" content="介绍 VS Code是一个开源跨平台的强大文本编辑器，利用丰富的扩展插件可以打造出一个功能强大的Markdown编辑器。 VS Code 下载地址: https://code.visualstudio.com 必备插件安"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">VS Code配置为强大的Markdown编辑器</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-31 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#介绍">介绍</a></li>
+    <li><a href="#必备插件安装">必备插件安装</a></li>
+    <li><a href="#开始编辑">开始编辑</a></li>
+    <li><a href="#高效编辑插件">高效编辑插件</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="介绍">介绍</h2>
+<p>VS Code是一个开源跨平台的强大文本编辑器，利用丰富的扩展插件可以打造出一个功能强大的Markdown编辑器。</p>
+<p>VS Code 下载地址:  <a href="https://code.visualstudio.com">https://code.visualstudio.com</a></p>
+<h2 id="必备插件安装">必备插件安装</h2>
+<ol>
+<li>
+<p>中文插件</p>
+<ul>
+<li>插件名称 <em>Chinese (Simplified) Language Pack for Visual Studio Code.</em></li>
+<li>配置项  <em>Configure Display Language</em> 中选择cn</li>
+<li>重启VS Code 生效</li>
+</ul>
+</li>
+<li>
+<p>主题插件</p>
+<ul>
+<li>插件名称 <em>One Dark Pro</em></li>
+<li>配置项  <em>管理 -&gt; 颜色主题</em>  中切换主题即可</li>
+</ul>
+</li>
+<li>
+<p>文件图标主题插件</p>
+<ul>
+<li>插件名称 <em>Material Icon Theme</em> 或者 <em>vscode-icons</em> 二选一</li>
+<li>配置项  <em>管理 -&gt; 文件图标主题</em>  中切换主题即可</li>
+</ul>
+</li>
+<li>
+<p>快捷键插件</p>
+<ul>
+<li>
+<p>Vim</p>
+</li>
+<li>
+<p>IntelliJ IDEA Key Bindings for Visual Studio Code</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="开始编辑">开始编辑</h2>
+<ol>
+<li>
+<p>新建后缀名为 .md 的文档</p>
+</li>
+<li>
+<p>打开侧边预览窗口</p>
+<ul>
+<li>侧边预览按键位置在编辑界面右上角</li>
+</ul>
+<p><img src="image-20200531080842951.png" alt="效果图"></p>
+</li>
+</ol>
+<h2 id="高效编辑插件">高效编辑插件</h2>
+<ol>
+<li>
+<p>Markdown Preview Enhanced</p>
+<p>VS Code自带的预览功能有些地方渲染的不是很好，如任务列表和表格的渲染。安装增强预览插件 (MPE) 可以解决这个问题。</p>
+<p>效果如下：</p>
+<p><img src="image-20200531082049654.png" alt="MPE效果图"></p>
+</li>
+<li>
+<p>Markdown All in One</p>
+<p>MAO 提供了常用的Markdown快捷键和自动补全功能。除此之外还有<strong>格式化表格</strong>和<strong>图片路径自动联想</strong>。</p>
+<p><img src="image-20200531085516310.png" alt="image-20200531085516310"></p>
+<p><img src="image-20200531085545964.png" alt="格式化表格"></p>
+</li>
+<li>
+<p>Markdown 规范检查插件</p>
+<p>Markdownlint是一款用来检查Markdown写作规范的插件，安装以后会对编辑的文档检查，在有问题的地方会给出改进提示。如下图所示</p>
+<p>![Markdownlint提示](D:\Downloads\hugo_0.69.2_Windows-64bit\leoblog\content\post\VS Code配置为强大的Markdown编辑器\image-20200531090247648.png)</p>
+</li>
+<li>
+<p>Git版本管理增强插件</p>
+<ul>
+<li>GitLens</li>
+<li>Git History</li>
+<li>gitIgnore</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lilei520007@126.com</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-05-31
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lilei520007@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">lilei520007@126.com</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
