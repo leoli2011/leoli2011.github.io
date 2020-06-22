@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-05-31T10:11:06+08:00</lastmod>
+    <loc>http://localhost:1313/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2020-06-22T07:59:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    <lastmod>2020-05-31T10:11:06+08:00</lastmod>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2020-06-22T07:59:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2020-06-22T07:59:53+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
     <lastmod>2020-05-31T10:11:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
