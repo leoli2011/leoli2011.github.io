@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Centos Fabric 环境搭建 - 老李小站</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lilei520007@126.com" /><meta name="description" content="CentOS虚拟机安装 安装VirtualBox 下载链接 https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe 下载CentOS 7 下载链接 http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso 安装CentOS7到虚拟机上 虚拟机网络配置 CentOS系" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Centos Fabric 环境搭建" />
+<meta property="og:description" content="CentOS虚拟机安装 安装VirtualBox 下载链接 https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe 下载CentOS 7 下载链接 http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso 安装CentOS7到虚拟机上 虚拟机网络配置 CentOS系" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" />
+<meta property="article:published_time" content="2020-06-27T21:26:25+08:00" />
+<meta property="article:modified_time" content="2020-06-27T21:26:25+08:00" />
+<meta itemprop="name" content="Centos Fabric 环境搭建">
+<meta itemprop="description" content="CentOS虚拟机安装 安装VirtualBox 下载链接 https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe 下载CentOS 7 下载链接 http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso 安装CentOS7到虚拟机上 虚拟机网络配置 CentOS系">
+<meta itemprop="datePublished" content="2020-06-27T21:26:25&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-27T21:26:25&#43;08:00" />
+<meta itemprop="wordCount" content="804">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Centos Fabric 环境搭建"/>
+<meta name="twitter:description" content="CentOS虚拟机安装 安装VirtualBox 下载链接 https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe 下载CentOS 7 下载链接 http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso 安装CentOS7到虚拟机上 虚拟机网络配置 CentOS系"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Centos Fabric 环境搭建</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-27 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#centos虚拟机安装">CentOS虚拟机安装</a></li>
+    <li><a href="#centos系统配置">CentOS系统配置</a></li>
+    <li><a href="#go环境变量配置">go环境变量配置</a></li>
+    <li><a href="#fabric安装">fabric安装</a></li>
+    <li><a href="#启动fabric">启动fabric</a></li>
+    <li><a href="#参考网站">参考网站</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="centos虚拟机安装">CentOS虚拟机安装</h2>
+<ol>
+<li>
+<p>安装VirtualBox</p>
+<p>下载链接 <a href="https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe">https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe</a></p>
+</li>
+<li>
+<p>下载CentOS 7</p>
+<p>下载链接 <a href="http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso">http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso</a></p>
+</li>
+<li>
+<p>安装CentOS7到虚拟机上</p>
+<ul>
+<li>
+<p>虚拟机网络配置</p>
+<p><img src="image-20200525202504540.png" alt="image-20200525202504540"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><img src="image-20200525202720805.png" alt="网络配置"></li>
+</ul>
+<h2 id="centos系统配置">CentOS系统配置</h2>
+<ol>
+<li>软件源配置</li>
+</ol>
+<blockquote>
+<p>sudo wget -O /etc/yum.repos.d/CentOS-Base.repo <a href="http://mirrors.163.com/.help/CentOS7-Base-163.repo">http://mirrors.163.com/.help/CentOS7-Base-163.repo</a>
+yum clean all
+yum makecache</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>安装git</p>
+<blockquote>
+<p>sudo yum install git</p>
+</blockquote>
+</li>
+<li>
+<p>安装go</p>
+<blockquote>
+<p>wget <a href="https://studygolang.com/dl/golang/go1.14.3.linux-amd64.tar.gz">https://studygolang.com/dl/golang/go1.14.3.linux-amd64.tar.gz</a></p>
+<p>mkdir download</p>
+<p>mv go1.14.3.linux-amd64.tar.gz  download/</p>
+<p>mkdir data</p>
+<p>tar -C data/ -zxvf download/go1.14.3.linux-amd64.tar.gz</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="go环境变量配置">go环境变量配置</h2>
+<ol>
+<li>
+<p>vi /etc/profile</p>
+</li>
+<li>
+<p>添加下列配置到文件末尾</p>
+<blockquote>
+<p>export GOROOT=/home/leo/work/data/go
+export GOPATH=/home/leo/work/data/gopath
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin</p>
+</blockquote>
+</li>
+<li>
+<p>测试go 环境变量是否配置成功</p>
+<p><img src="image-20200525224324329.png" alt="image-20200525224324329"></p>
+<ol start="4">
+<li>
+<p>git命令测试</p>
+<p><img src="image-20200525225814167.png" alt="image-20200525225814167"></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="fabric安装">fabric安装</h2>
+<pre><code>    1. 下载fabric代码
+
+       &gt;  cd github.com/hyperledger/
+       &gt;  git clone https://github.com/hyperledger/fabric.git
+
+    2. 下载fabric-sample代码
+
+       &gt; git clone https://github.com/hyperledger/fabric-samples.git
+</code></pre>
+<h2 id="启动fabric">启动fabric</h2>
+<ol>
+<li>
+<p>进入fabric的scritpt目录，执行启动脚本boot.scritps</p>
+<blockquote>
+<p>[leo@localhost scripts]$ ./bootstrap.sh</p>
+</blockquote>
+</li>
+<li>
+<p>提示依赖docker</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">   
+Pull Hyperledger Fabric docker images
+   
+=========================================================
+Docker not installed, bypassing download of Fabric images
+=========================================================
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>安装docker</p>
+<blockquote>
+<p>[leo@localhost ~]$ yum install docker-io</p>
+<p>检查版本信息
+[leo@localhost ~]$ docker version
+Client:
+Version:         1.13.1
+API version:     1.26
+Package version:</p>
+</blockquote>
+</li>
+<li>
+<p>启动docker</p>
+<blockquote>
+<p>[leo@localhost ~]$ sudo systemctl start docker</p>
+<p>检查docker状态</p>
+<p><img src="image-20200603105311664.png" alt="image-20200603105311664"></p>
+</blockquote>
+</li>
+<li>
+<p>测试hello-world</p>
+</li>
+</ol>
+<blockquote>
+<p>[leo@localhost ~]$ docker pull hello-world</p>
+<p>[leo@localhost ~]$ sudo docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+docker.io/hello-world   latest              bf756fb1ae65        5 months ago        13.3 kB</p>
+<p>[leo@localhost ~]$ sudo docker run hello-world</p>
+<p>Hello from Docker!
+This message shows that your installation appears to be working correctly.</p>
+<p>To generate this message, Docker took the following steps:</p>
+<ol>
+<li>The Docker client contacted the Docker daemon.</li>
+<li>The Docker daemon pulled the &ldquo;hello-world&rdquo; image from the Docker Hub.
+(amd64)</li>
+<li>The Docker daemon created a new container from that image which runs the
+executable that produces the output you are currently reading.</li>
+<li>The Docker daemon streamed that output to the Docker client, which sent it
+to your terminal.</li>
+</ol>
+</blockquote>
+<ol start="6">
+<li>
+<p>docker常用命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker images //查看镜像
+docker pull XXX //拉取镜像
+docker run -d xxx //启动容器
+docker ps   //查询启动的容器
+docker stop XXX //关闭容器
+docker run -d -p 8082:80 nginx //容器上的80端口映射到机器上的8082端口
+docker stop XXX //停止容器
+docker rmi -f XXX //删除镜像 -f 强制删除
+   
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>下载fabric镜像</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>leo@localhost fabric<span class="o">]</span>$ <span class="nb">cd</span> scripts/
+<span class="o">[</span>leo@localhost scripts<span class="o">]</span>$ ./bootstrap.sh
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>安装docker-compose</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo yum install epel-release
+sudo yum install docker-compose
+</code></pre></td></tr></table>
+</div>
+</div><p>检查docker-compose版本</p>
+<blockquote>
+<p>[leo@bogon first-network]$ docker-compose &ndash;version
+docker-compose version 1.18.0, build 8dd22a9</p>
+</blockquote>
+</li>
+<li>
+<p>安装pip</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo yum install python-pip
+sudo pip install --upgrade pip
+<span class="o">[</span>leo@bogon ~<span class="o">]</span>$ pip -V
+pip 20.1.1 from /usr/lib/python2.7/site-packages/pip <span class="o">(</span>python 2.7<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>启动demo</p>
+<blockquote>
+<p>添加两个文件到fabric-samples目录并解压</p>
+<p>hyperledger-fabric-ca-linux-amd64-1.3.0.tar.gz</p>
+<p>hyperledger-fabric-linux-amd64-1.3.0.tar.gz</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>leo@bogon first-network<span class="o">]</span>$ <span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/hyperledger/fabric-samples/first-network
+<span class="o">[</span>leo@bogon first-network<span class="o">]</span>$ ./byfn.sh generate
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="参考网站">参考网站</h2>
+<ul>
+<li>[^go语言中文网] <a href="https://studygolang.com/dl">https://studygolang.com/dl</a></li>
+<li>[^163CentOS镜像] <a href="http://mirrors.163.com/.help/centos.html">http://mirrors.163.com/.help/centos.html</a></li>
+<li>docker镜像文件网址 ：https://hub.docker.com/explore</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lilei520007@126.com</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-06-27
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+            <span class="next-text nav-default">Markdown基础语法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lilei520007@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">lilei520007@126.com</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -6,10 +6,19 @@
     <description>Recent content on 老李小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Jun 2020 07:59:53 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 21:26:25 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Centos Fabric 环境搭建</title>
+      <link>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sat, 27 Jun 2020 21:26:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+      <description>CentOS虚拟机安装 安装VirtualBox 下载链接 https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe 下载CentOS 7 下载链接 http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso 安装CentOS7到虚拟机上 虚拟机网络配置 CentOS系</description>
+    </item>
     
     <item>
       <title>Markdown基础语法</title>
