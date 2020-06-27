@@ -1,56 +1,63 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://leoli2011.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://leoli2011.github.io/post/</loc>
+    <lastmod>2020-06-27T22:00:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://leoli2011.github.io/post/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%8B%E7%BB%8D/</loc>
+    <lastmod>2020-06-27T22:00:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://leoli2011.github.io/</loc>
+    <lastmod>2020-06-27T22:00:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://leoli2011.github.io/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-06-27T21:44:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2020-06-27T21:44:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2020-06-27T21:44:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://leoli2011.github.io/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-06-27T21:26:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
+    <loc>https://leoli2011.github.io/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2020-06-22T07:59:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <loc>https://leoli2011.github.io/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
     <lastmod>2020-05-31T10:11:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://leoli2011.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://leoli2011.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

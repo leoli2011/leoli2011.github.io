@@ -2,48 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>老李小站</title>
-    <link>http://localhost:1313/</link>
+    <link>https://leoli2011.github.io/</link>
     <description>Recent content on 老李小站</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 27 Jun 2020 21:44:36 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 27 Jun 2020 22:00:45 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://leoli2011.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>以太坊介绍</title>
+      <link>https://leoli2011.github.io/post/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 27 Jun 2020 22:00:45 +0800</pubDate>
+      
+      <guid>https://leoli2011.github.io/post/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%8B%E7%BB%8D/</guid>
+      <description>以太坊是一个运行在计算机网络中的软件，它确保数据以及称为智能合约的小程序可以在没有设置中心协调者情况下被所有网络网络中的计算机复制和处理。以</description>
+    </item>
+    
+    <item>
       <title>比特币基础</title>
-      <link>http://localhost:1313/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</link>
+      <link>https://leoli2011.github.io/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sat, 27 Jun 2020 21:44:36 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://leoli2011.github.io/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</guid>
       <description>比特币使用的技术 Hash算法 作用： 用于工作量证明，将任意长度的格式化为固定的16进制字符串 主流算法： MD5, SHA256(比特币用), SHA254 性质： 抗碰</description>
     </item>
     
     <item>
       <title>Centos Fabric 环境搭建</title>
-      <link>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <link>https://leoli2011.github.io/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Sat, 27 Jun 2020 21:26:25 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+      <guid>https://leoli2011.github.io/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
       <description>CentOS虚拟机安装 安装VirtualBox 下载链接 https://download.virtualbox.org/virtualbox/6.1.8/VirtualBox-6.1.8-137981-Win.exe 下载CentOS 7 下载链接 http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso 安装CentOS7到虚拟机上 虚拟机网络配置 CentOS系</description>
     </item>
     
     <item>
       <title>Markdown基础语法</title>
-      <link>http://localhost:1313/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <link>https://leoli2011.github.io/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Mon, 22 Jun 2020 07:59:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <guid>https://leoli2011.github.io/post/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
       <description>本文markdown源文件 这是一个标题 这是第二个标题 粗体 我是粗体 我也是粗体 斜体 我是斜体 我也是斜体 没有空行 我是第一行 我是第二行 有空行 我是第一行</description>
     </item>
     
     <item>
       <title>VS Code配置为强大的Markdown编辑器</title>
-      <link>http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <link>https://leoli2011.github.io/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</link>
       <pubDate>Sun, 31 May 2020 10:11:06 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <guid>https://leoli2011.github.io/post/vs-code%E9%85%8D%E7%BD%AE%E4%B8%BA%E5%BC%BA%E5%A4%A7%E7%9A%84markdown%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
       <description>介绍 VS Code是一个开源跨平台的强大文本编辑器，利用丰富的扩展插件可以打造出一个功能强大的Markdown编辑器。 VS Code 下载地址: https://code.visualstudio.com 必备插件安</description>
     </item>
     
