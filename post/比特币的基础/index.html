@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>比特币基础 - 老李小站</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lilei520007@126.com" /><meta name="description" content="比特币使用的技术 Hash算法 作用： 用于工作量证明，将任意长度的格式化为固定的16进制字符串 主流算法： MD5, SHA256(比特币用), SHA254 性质： 抗碰" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="比特币基础" />
+<meta property="og:description" content="比特币使用的技术 Hash算法 作用： 用于工作量证明，将任意长度的格式化为固定的16进制字符串 主流算法： MD5, SHA256(比特币用), SHA254 性质： 抗碰" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/" />
+<meta property="article:published_time" content="2020-06-27T21:44:36+08:00" />
+<meta property="article:modified_time" content="2020-06-27T21:44:36+08:00" />
+<meta itemprop="name" content="比特币基础">
+<meta itemprop="description" content="比特币使用的技术 Hash算法 作用： 用于工作量证明，将任意长度的格式化为固定的16进制字符串 主流算法： MD5, SHA256(比特币用), SHA254 性质： 抗碰">
+<meta itemprop="datePublished" content="2020-06-27T21:44:36&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-27T21:44:36&#43;08:00" />
+<meta itemprop="wordCount" content="2363">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="比特币基础"/>
+<meta name="twitter:description" content="比特币使用的技术 Hash算法 作用： 用于工作量证明，将任意长度的格式化为固定的16进制字符串 主流算法： MD5, SHA256(比特币用), SHA254 性质： 抗碰"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">比特币基础</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-27 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#比特币使用的技术">比特币使用的技术</a>
+      <ul>
+        <li><a href="#hash算法">Hash算法</a></li>
+        <li><a href="#密码学">密码学</a></li>
+        <li><a href="#编码方案">编码方案</a></li>
+        <li><a href="#p2p网络">P2P网络</a></li>
+        <li><a href="#merkle树">merkle树</a></li>
+        <li><a href="#工作量证明proof-of-work">工作量证明（proof of work）</a></li>
+      </ul>
+    </li>
+    <li><a href="#比特币的结构">比特币的结构</a></li>
+    <li><a href="#区块结构">区块结构</a></li>
+    <li><a href="#比特币交易流程">比特币交易流程</a></li>
+    <li><a href="#区块链应用场景">区块链应用场景</a></li>
+    <li><a href="#比特币的存储bolt">比特币的存储(bolt)</a></li>
+    <li><a href="#比特币客户端的安装">比特币客户端的安装</a></li>
+    <li><a href="#场内交易场外交易">场内交易场外交易</a></li>
+    <li><a href="#参考网站">参考网站</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="比特币使用的技术">比特币使用的技术</h2>
+<h3 id="hash算法">Hash算法</h3>
+<ol>
+<li>
+<p>作用： 用于工作量证明，将任意长度的格式化为固定的16进制字符串</p>
+</li>
+<li>
+<p>主流算法： MD5, SHA256(比特币用), SHA254</p>
+</li>
+<li>
+<p>性质：</p>
+<ul>
+<li>抗碰撞性</li>
+</ul>
+<p>当知道X, 无法求出一个Y, 使X与Y的HASH值相同</p>
+<ul>
+<li>
+<p>不可逆转</p>
+<p>不可根据X的HASH值求出X</p>
+</li>
+<li>
+<p>时间友好</p>
+<p>没有快捷方式产出一个满足特殊需求的HASH值，就是POW共识算法的基础</p>
+</li>
+</ul>
+</li>
+<li>
+<p>演示</p>
+<p>​     SHA256 Hash：https://andersbrownworth.com/blockchain/hash</p>
+<p><img src="image-20200607101946272.png" alt="image-20200607101946272"></p>
+</li>
+</ol>
+<h3 id="密码学">密码学</h3>
+<ol>
+<li>
+<p>对称加密</p>
+<ul>
+<li>
+<p>介绍：采用单密码系统的加密算法，同一个密钥可以同时用作信息的加密和解密。</p>
+</li>
+<li>
+<p>算法：DES 3DES</p>
+</li>
+<li>
+<p>特点：高效，适用于大量数据的加解密场景。算法公开，安全性取决于密钥大小，密钥大的效率低。需要平衡安全性和效率</p>
+</li>
+</ul>
+</li>
+<li>
+<p>非对称加密</p>
+<ul>
+<li>
+<p>接受：公钥私钥一一对应，公钥加密对外公开，私钥用于解密和签名。私钥仅自己持有，绝不对外公开</p>
+</li>
+<li>
+<p>算法：RSA，ECC椭圆曲线算法(用于BTC)，背包算法， DH</p>
+</li>
+<li>
+<p>特点：安全性高，加解密复杂，效率低</p>
+</li>
+</ul>
+</li>
+<li>
+<p>完美方案</p>
+<p>将对称加密的密钥使用非对称加密的公钥进行加密协商，然后发送出去，接受方使用私钥进行解密得到对称加密的密钥，然后双方可以使用对称加密传输信息。</p>
+</li>
+</ol>
+<h3 id="编码方案">编码方案</h3>
+<p>Base64编码：https://www.jianshu.com/p/e95278ed98b4</p>
+<ul>
+<li>编码原理</li>
+</ul>
+<blockquote>
+<p>Base64编码的思想是：采用64个基本的ASCII码字符对数据进行重新编码。</p>
+<ul>
+<li>将需要编码的数据拆分成字节数组，以3个字节为一组，按顺序排列24位数据，再把这24位数据分成4组，即每组6位；</li>
+<li>再在每组的的最高位前补两个0凑足一个字节，这样就把一个3字节为一组的数据重新编码成了4个字节；</li>
+<li>当所要编码的数据的字节数不是3的整倍数，也就是说在分组时最后一组不够3个字节，这时在最后一组填充1到2个0字节，并在最后编码完成后在结尾添加1到2个=号。</li>
+</ul>
+</blockquote>
+<ul>
+<li>编码过程</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">- 首先取ABC对应的ASCII码值
+A : 65、B : 66、C : 67
+- 再取二进制值
+A : 01000001、B : 01000010、C : 01000011
+- 然后把这三个字节的二进制码接起来
+010000010100001001000011
+- 再以6位为单位分成4个数据块并在最高位填充两个0后形成4个字节的编码后的值
+00010000、00010100、00001001、00000011
+- 再把这4个字节数据转化成10进制数
+16、20、19、3
+- 最后根据Base64给出的64个基本字符表，查出对应的ASCII码字符
+Q、U、J、D
+这里的值实际就是数据在字符表中的索引。
+解码过程就是把4个字节再还原成3个字节再根据不同的数据形式把字节数组重新整理成数据。
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="p2p网络">P2P网络</h3>
+<p>用于广播交易，同步账本</p>
+<ul>
+<li>
+<p>介绍</p>
+<p>点对点技术，去中心化，依靠用户群交换信息的互联网体系</p>
+<p>网络的参与者共享他们所拥有一部分硬件资源（处理能力，存储能力，网络连接能力，打印能力等）这些</p>
+<p>共享资源通过网络提供服务和内容，能被其它对等节点(peer)直接访问而无需经过中间实体，在此网络中的参与者既是资源服务和内容的提供者，又是资源服务的获取者。P2P体系结构是应用层次概念。</p>
+</li>
+<li>
+<p>特点</p>
+<p>耐攻击，高容错，地位平等</p>
+</li>
+<li>
+<p>应用</p>
+<p>BT下载，迅雷，电驴下载</p>
+</li>
+</ul>
+<h3 id="merkle树">merkle树</h3>
+<p>用于快速验证交易</p>
+<ul>
+<li>
+<p>介绍</p>
+<p>merkel tree通常也被称作hash tree，是存储hash值的一颗树，　merkle tree的叶子是数据块的hash值。</p>
+</li>
+<li>
+<p>特点</p>
+<p>二叉树</p>
+</li>
+<li>
+<p>应用</p>
+<p>可以快速检索，尤其是在数据量猛增时，搜索效率高，在比特币中用于快速验证每一笔交易是否存在于某个block中</p>
+</li>
+</ul>
+<h3 id="工作量证明proof-of-work">工作量证明（proof of work）</h3>
+<ol>
+<li>
+<p>介绍</p>
+<p>pow是一种对应服务器与资源占用或者阻断服务攻击的经济对策。一般要求是用户进行一些适当的耗时复杂操作预算，并且答案能被服务器快速验证，以此耗用的时间社保能源作为担保成本，以确保服务与资源是被真正的需求所使用。目前该技术成为了加密货币的主流共识机制之一。如比特币采用的挖矿技术。</p>
+</li>
+<li>
+<p>特点</p>
+<p>BTC的pow要求运行一个hash算法(sha256)找到一个符合要求的block hash.该hash由n个前导0构成，0的个数取决于网络的难度值。要得到合理的block hash需要经过大量的尝试计算，计算时间取决于机器的hash的运算速度。</p>
+<p>难度数据网站：https://www.blockchain.com/zh-cn/explorer</p>
+<p>区块浏览器：https://btc.com/</p>
+<p><img src="image-20200607192125364.png" alt="image-20200607192125364"></p>
+</li>
+</ol>
+<h2 id="比特币的结构">比特币的结构</h2>
+<table>
+<thead>
+<tr>
+<th>字节</th>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>区块大小</td>
+<td>用字节表示的该字段之后的区块大小</td>
+</tr>
+<tr>
+<td>80</td>
+<td>区块头</td>
+<td>组成区块链头的一个字段</td>
+</tr>
+<tr>
+<td>1-9</td>
+<td>交易计数器</td>
+<td>该区块包含的交易的数量，包含coinbase交易</td>
+</tr>
+<tr>
+<td>不定</td>
+<td>交易</td>
+<td>记录在区块链里边的信息</td>
+</tr>
+</tbody>
+</table>
+<p>注意：比特币的区块大小目前严格限制在1MB，４个字节不在此地</p>
+<p>区块体：coinbase交易　第一条交易　挖矿奖励矿工</p>
+<p>​				普通转账交易：每笔交易包括付款方，收款方，付款金额，手续费等等</p>
+<h2 id="区块结构">区块结构</h2>
+<p><img src="image-20200607194932356.png" alt="image-20200607194932356"></p>
+<h2 id="比特币交易流程">比特币交易流程</h2>
+<p><img src="image-20200607220020299.png" alt="image-20200607220020299"></p>
+<p><img src="image-20200607220739283.png" alt="image-20200607220739283"></p>
+<h2 id="区块链应用场景">区块链应用场景</h2>
+<p>资产：　数字资产发行</p>
+<p>支付：　跨境支付　交易结算</p>
+<p>记账：　股权交易　供应链金融　商业积分</p>
+<p>不可篡改：　溯源　众筹　医疗证明　存在性证明</p>
+<p>点对点：共享经济　物联网</p>
+<p>隐私：匿名交易</p>
+<p>财产只受自己控制，有私钥保护财产，不会被其它人盗取</p>
+<p>无通货膨胀</p>
+<p>没有假钞</p>
+<p>流通性好</p>
+<h2 id="比特币的存储bolt">比特币的存储(bolt)</h2>
+<p>bolt地址：https://github.com/boltdb/bolt</p>
+<h2 id="比特币客户端的安装">比特币客户端的安装</h2>
+<p>比特币是用C++开发的代码</p>
+<p>安装网站：https://bitcoin.org/zh_CN/</p>
+<p>比特币核心钱包源码：https://github.com/bitcoin/bitcoin</p>
+<p>比特币核心下载地址：https://bitcoin.org/zh_CN/download</p>
+<h2 id="场内交易场外交易">场内交易场外交易</h2>
+<p><img src="image-20200610130250907.png" alt="image-20200610130250907"></p>
+<h2 id="参考网站">参考网站</h2>
+<p>比特币官网： <a href="https://www.bitcoin.com">https://www.bitcoin.com</a></p>
+<p>比特币本地钱包：https://www.bitcoin.com</p>
+<p>区块链演示网站: <a href="https://blockchaindemo.io/">https://blockchaindemo.io/</a></p>
+<p>比特币的用途：http://www.ruanyifeng.com/blog/2013/10/bitcoin.html</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lilei520007@126.com</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-06-27
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+            <span class="next-text nav-default">Centos Fabric 环境搭建</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lilei520007@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">lilei520007@126.com</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2020-06-27T21:26:25+08:00</lastmod>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2020-06-27T21:44:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-06-27T21:26:25+08:00</lastmod>
+    <loc>http://localhost:1313/post/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-06-27T21:44:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2020-06-27T21:44:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/centos-fabric-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2020-06-27T21:26:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
