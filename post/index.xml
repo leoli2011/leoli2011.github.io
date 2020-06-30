@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 老李小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 27 Jun 2020 22:00:45 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 11:06:08 +0800</lastBuildDate>
     
 	<atom:link href="https://leoli2011.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows下nginx搭建GitBook服务器</title>
+      <link>https://leoli2011.github.io/post/windows%E4%B8%8Bnginx%E6%90%AD%E5%BB%BAgitbook%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Tue, 30 Jun 2020 11:06:08 +0800</pubDate>
+      
+      <guid>https://leoli2011.github.io/post/windows%E4%B8%8Bnginx%E6%90%AD%E5%BB%BAgitbook%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>安装nginx 下载 http://nginx.org/en/download.html 安装 1 2 3 4 cd c:\ unzip nginx-1.19.0.zip cd nginx-1.19.0 start nginx 检查nginx是否运行 1 2 3 4 5 6 C:\nginx-1.19.0&amp;gt;tasklist /fi &amp;#34;imagename eq nginx.exe&amp;#34; Image Name PID Session Name Session# Mem Usage =============== ======== ============== ========== ============ nginx.exe 652 Console 0 2 780 K //主进</description>
+    </item>
     
     <item>
       <title>以太坊介绍</title>

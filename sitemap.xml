@@ -3,20 +3,27 @@
   
   <url>
     <loc>https://leoli2011.github.io/post/</loc>
-    <lastmod>2020-06-27T22:00:45+08:00</lastmod>
+    <lastmod>2020-06-30T11:06:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://leoli2011.github.io/post/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%8B%E7%BB%8D/</loc>
-    <lastmod>2020-06-27T22:00:45+08:00</lastmod>
+    <loc>https://leoli2011.github.io/post/windows%E4%B8%8Bnginx%E6%90%AD%E5%BB%BAgitbook%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2020-06-30T11:06:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://leoli2011.github.io/</loc>
+    <lastmod>2020-06-30T11:06:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://leoli2011.github.io/post/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%8B%E7%BB%8D/</loc>
     <lastmod>2020-06-27T22:00:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
